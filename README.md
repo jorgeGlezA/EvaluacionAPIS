@@ -48,9 +48,6 @@ _El servicio se levantará en_ `http://localhost:8080`
 
 _El servicio se levantará en_ `http://localhost:8081`
 
-#### Endpoint que se consume internamente:
-- POST `/api/transaccion`  
-  Recibe datos desde API 1 ya descifrados y devuelve una respuesta con status.
 
 ---
 
@@ -71,9 +68,6 @@ ng serve
 
 4. Abre tu navegador en: [http://localhost:4200](http://localhost:4200)
 
-### ⚠️ Notas
-- Si ves un error de CORS, asegúrate de que el controlador de API 1 tenga `@CrossOrigin(origins = "*")`
-- El campo "secreto" es cifrado con AES-256 y enviado al backend.
 
 ---
 
@@ -97,23 +91,3 @@ Puedes probar directamente el backend con:
 }
 ```
 
-### API 2
-- URL: `http://localhost:8081/api/transaccion`
-- Método: `POST`
-- Body:
-
-```json
-{
-  "operacion": "venta",
-  "importe": "1000",
-  "cliente": "Juan Pérez",
-  "secreto": "secreto en texto plano"
-}
-```
-
----
-
-## 🧹 Para detener los servicios
-
-- **Backend:** Ctrl + C en la terminal donde se ejecuta.
-- **Angular:** Ctrl + C también.
